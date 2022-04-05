@@ -7,4 +7,4 @@ Also, it currently uses 1 API call per entry in the original address file, so fo
 
 Included some .bat files to install the dependencies and to actually execute the script just to make it very simple to get going with it
 
-Add names and addresses to addresses file as desired, create APIKEY file with your api key from GCP, and then run the dispatch.bat for Windows or execute the dispatch.py file however you feel like.
+Add names and addresses to addresses file as desired, create apikey file with your api key from GCP, and then run the dispatch.bat for Windows or execute the dispatch.py file however you feel like.
