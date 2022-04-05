@@ -38,6 +38,8 @@ for (i1, row1) in addresses.iterrows():
     distance_value.append(result_distance_value)
 
 #sorts techs by distance to destination address
+#sort(haha) of janky right now since I have 4 seperate arrays, it compares the values in the distance_value list
+#and then sorts all the lists at once based on that
 for step in range(len(distance_value)):
         min_idx = step
 
