@@ -1,5 +1,5 @@
 # Dispatch-script
-Small script I wrote for my brother to use at work, takes a client's office address and runs it against a list of techs and their home addresses to generate a list of travel time/distance to the clients office for all their techs to determine the preferable order of who should handle the call.
+Small script I wrote for my brother to use at work, takes a client's office address and runs it against a list of techs and their home addresses to generate a list of travel time/distance to the client's office for all their techs to determine the preferable order of who should handle the call.
 
 Not super experienced with Python or Google Maps API so bit of a learning experience and could use some further optimization that I may do at a later date just for the practice.
 Mainly that I used 4 or 5 different arrays to store all the different values and used a sort of roundabout sorting method, will want to look into how to make a custom data structs in python and see if overloading comparision operators is allowed like it is in C++ or Java, or maybe leverage an existing data strucutre from panda and store it all in there, I admittedly did not poke around very much in it aside from using it to parse the excel sheet.
