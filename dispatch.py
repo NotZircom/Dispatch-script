@@ -24,14 +24,7 @@ gmaps = googlemaps.Client(key=apikey)
 file_output = open(destination + ".txt", "w")
 
 #loops through address list and runs it against the destination address
-#currently not very optimized, it does 1 API call per entry in the excel sheet
-#but the distance_matrix function takes up to 25 destinations or origins so we could
-#divide the technician list into batches and process 24 at a time(24 tech home addresses + 1 client address)
-#however this was a quicky and dirty script I knocked out in a couple hours and its going to be run manually and
-#you get something like 6000 API calls for free so not super concerned with hitting that limit
-#it also uses 4 seperate arrays instead of a multidimensional one or custom data struct like I would probably use
-#in another language I'm more familiar with, like I said I knocked this out in a couple hours so just keeping it simple
-#may come back to this and optimze it later just as an exercise to get more familiar with Python
+#currently not very optimized
 for (i1, row1) in addresses.iterrows():
     origin = row1['Address']
     temp_name = row1['Name']
@@ -56,8 +49,7 @@ for step in range(len(distance_value)):
         (time_list[step], time_list[min_idx]) = (time_list[min_idx], time_list[step])
         (name_list[step], name_list[min_idx]) = (name_list[min_idx], name_list[step])
 
-#prints output to the console and then writes it to file
-#probably a better way to write to files than just directly piping print output into the file but keeping it simple for now
+#prints output to the console and writes it to file
 for x in range(len(name_list)):
     print("Name: " + name_list[x], file=open(destination + ".txt", "a"))
     print("Distance: " + distance_list[x], file=open(destination + ".txt", "a"))
